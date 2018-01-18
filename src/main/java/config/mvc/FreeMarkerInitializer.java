@@ -1,4 +1,4 @@
-package config.free;
+package config.mvc;
 
 import javax.servlet.Filter;
 
@@ -6,7 +6,7 @@ import org.springframework.web.filter.CharacterEncodingFilter;
 import org.springframework.web.filter.HiddenHttpMethodFilter;
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 
-public class WebInitializer extends AbstractAnnotationConfigDispatcherServletInitializer implements org.springframework.boot.web.servlet.ServletContextInitializer{
+public class FreeMarkerInitializer extends AbstractAnnotationConfigDispatcherServletInitializer implements org.springframework.boot.web.servlet.ServletContextInitializer{
 	
 	/**
 	 * 多个继承AbstractAnnotationConfigDispatcherServletInitializer，只能定义一个，如果使用spring-boot启用，就全不能设置
@@ -19,7 +19,7 @@ public class WebInitializer extends AbstractAnnotationConfigDispatcherServletIni
 
 	@Override
 	protected Class<?>[] getServletConfigClasses() {
-		return new Class[] { WebConfig.class };
+		return new Class[] { FreemarkerConfig.class };
 	}
 
 	@Override

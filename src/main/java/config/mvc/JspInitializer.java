@@ -1,4 +1,4 @@
-package config.jsp;
+package config.mvc;
 
 import javax.servlet.Filter;
 
@@ -6,7 +6,7 @@ import org.springframework.web.filter.CharacterEncodingFilter;
 import org.springframework.web.filter.HiddenHttpMethodFilter;
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 
-public class WebInitializer extends AbstractAnnotationConfigDispatcherServletInitializer {
+public class JspInitializer extends AbstractAnnotationConfigDispatcherServletInitializer {
 
 	@Override
 	/**
@@ -19,7 +19,7 @@ public class WebInitializer extends AbstractAnnotationConfigDispatcherServletIni
 
 	@Override
 	protected Class<?>[] getServletConfigClasses() {
-		return new Class[] { WebConfig.class };
+		return new Class[] { JspConfig.class };
 	}
 
 	@Override

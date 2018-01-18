@@ -1,4 +1,4 @@
-package config.free;
+package config.root;
 
 import org.springframework.context.annotation.Configuration;
 

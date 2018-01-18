@@ -1,4 +1,4 @@
-package config.free;
+package config.mvc;
 
 import java.util.List;
 
@@ -31,7 +31,7 @@ import cn.lijuntao.boot.interceptor.MyInterceptor;
 @Configuration()
 @EnableWebMvc
 @ComponentScan(basePackages={"cn.lijuntao.boot.controller.freemarker"})
-public class WebConfig implements WebMvcConfigurer {
+public class FreemarkerConfig implements WebMvcConfigurer {
 
     @Override
     public void configureViewResolvers(ViewResolverRegistry registry) {

@@ -1,8 +1,7 @@
-package config.jsp;
+package config.mvc;
 
 import java.util.List;
 
-import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.format.FormatterRegistry;
@@ -23,7 +22,6 @@ import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry
 import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;
 import org.springframework.web.servlet.config.annotation.ViewResolverRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
-import org.springframework.web.servlet.view.freemarker.FreeMarkerConfigurer;
 import org.springframework.web.servlet.view.json.MappingJackson2JsonView;
 
 import cn.lijuntao.boot.interceptor.MyInterceptor;
@@ -31,7 +29,7 @@ import cn.lijuntao.boot.interceptor.MyInterceptor;
 @Configuration
 @EnableWebMvc
 @ComponentScan(basePackages={"cn.lijuntao.boot.controller.jsp"})
-public class WebConfig implements WebMvcConfigurer {
+public class JspConfig implements WebMvcConfigurer {
 
     @Override
     public void configureViewResolvers(ViewResolverRegistry registry) {

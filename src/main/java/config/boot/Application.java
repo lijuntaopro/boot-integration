@@ -12,7 +12,7 @@ import org.springframework.boot.web.servlet.ServletContextInitializer;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Bean;
 
-import config.jsp.WebInitializer;
+import config.mvc.JspInitializer;
 
 @SpringBootApplication
 //@ComponentScan(basePackages={"cn.lijuntao.boot"})
@@ -27,7 +27,7 @@ public class Application{
     public ServletContextInitializer freeInitializer() {
     	return new ServletContextInitializer() {
     		public void onStartup(ServletContext servletContext) throws ServletException {
-    			new config.free.WebInitializer().onStartup(servletContext);
+    			new config.mvc.FreeMarkerInitializer().onStartup(servletContext);
     		}
     	};
     }
@@ -36,7 +36,7 @@ public class Application{
     public ServletContextInitializer jspInitializer(ServletContext servletContext) {
     	return new ServletContextInitializer() {
     		public void onStartup(ServletContext servletContext) throws ServletException {
-    			new WebInitializer().onStartup(servletContext);
+    			new JspInitializer().onStartup(servletContext);
     		}
     	};
     }
