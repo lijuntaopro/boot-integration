@@ -8,7 +8,7 @@ import org.springframework.data.elasticsearch.repository.ElasticsearchRepository
 
 import cn.lijuntao.boot.entity.Diagnosis;
 
-public interface DiagnosisRepository extends ElasticsearchRepository<Diagnosis, Long> {
+public interface DiagnosisRepository extends ElasticsearchRepository<Diagnosis, Long>, DiagnosisRepositoryCustom<Diagnosis, Long> {
 	@Query("{\"bool\":{\"must\":[{\"match_all\":{}}],\"must_not\":[],\"should\":[]}}")
 	List<Diagnosis> searchAll();
 	

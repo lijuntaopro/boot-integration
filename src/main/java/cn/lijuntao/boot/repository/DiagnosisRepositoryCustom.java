@@ -1,5 +1,9 @@
 package cn.lijuntao.boot.repository;
 
-public interface DiagnosisRepositoryCustom {
+import java.io.Serializable;
 
+public interface DiagnosisRepositoryCustom<T, D extends Serializable> {
+	
+	public T templateGet(D d);
+	
 }

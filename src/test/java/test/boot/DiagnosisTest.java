@@ -65,4 +65,16 @@ public class DiagnosisTest {
 		System.out.println(searchAll.size());
 		System.out.println(JsonUtils.toJson(searchAll));
 	}
+	
+	@Test
+	public void findOne(){
+		Diagnosis findOne = diagnosisRepository.findOne(101L);
+		System.out.println(JsonUtils.toJson(findOne));
+	}
+	
+	@Test
+	public void findOne2(){
+		Diagnosis diagnosis = diagnosisRepository.templateGet(101L);
+		System.out.println(JsonUtils.toJson(diagnosis));
+	}
 }
