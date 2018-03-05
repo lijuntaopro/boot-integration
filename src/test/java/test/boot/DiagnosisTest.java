@@ -77,4 +77,14 @@ public class DiagnosisTest {
 		Diagnosis diagnosis = diagnosisRepository.templateGet(101L);
 		System.out.println(JsonUtils.toJson(diagnosis));
 	}
+	
+	@Test
+	public void save(){
+		Diagnosis diagnosis = new Diagnosis();
+		diagnosis.setId(200L);
+		diagnosis.setCode("1111");
+		diagnosis.setName("test");
+		Diagnosis save = diagnosisRepository.save(diagnosis);
+		System.out.println(JsonUtils.toJson(diagnosis));
+	}
 }
