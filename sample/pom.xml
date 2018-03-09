@@ -12,6 +12,7 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<java.version>1.8</java.version>
+		<start-class>boot.Application</start-class>
 	</properties>
 	<parent>
 		<groupId>org.springframework.boot</groupId>
@@ -28,8 +29,15 @@
 	<build>
 		<plugins>
 			<plugin>
+				<!-- 采用这个能打可执行jar，依赖也会打进去 -->
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+				
+				<!-- 采用这个能打可执行jar，依赖不会打进出 -->
+				<!-- 
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-jar-plugin</artifactId>
+				 -->
 			</plugin>
 		</plugins>
 	</build>
